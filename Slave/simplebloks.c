@@ -1,6 +1,5 @@
 #include "delay.h"
 #include "gpio.h"
-#include "spioled.h"
 #include "protocol.h"
 
 u8 UID = 0;

@@ -1,4 +1,6 @@
 
+filename = simplebloks
+
 DEFS = -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD
 
 CC = arm-none-eabi-gcc
@@ -13,7 +15,6 @@ INCLUDES = -I $(STM)/Libraries/CMSIS/CM3/DeviceSupport/ST/STM32F10x/ \
 	-I $(STM)/Libraries/CMSIS/CM3/CoreSupport/ \
 	-I $(STM)/Libraries/STM32F10x_StdPeriph_Driver/inc/ \
 	-I . \
-	-I ./OLED \
 	-I ./SYSTEM
 
 CON_INC = $(STM)/Libraries/STM32F10x_StdPeriph_Driver/src
@@ -21,7 +22,6 @@ CON_INC = $(STM)/Libraries/STM32F10x_StdPeriph_Driver/src
 SRC = $(filename).c \
 	protocol.c \
 	gpio.c \
-	OLED/spioled.c \
 	SYSTEM/delay.c \
 	SYSTEM/sys.c \
 	SYSTEM/usart.c \
